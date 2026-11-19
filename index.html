@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel — AI Agent + Docker + Telegram Portfolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
+  header { padding: 60px 20px 30px; text-align: center; }
+  header h1 { font-size: 2.2rem; }
+  header p { color: #8b949e; margin-top: 8px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .tag { display: inline-block; background: #1f6feb22; color: #58a6ff; border: 1px solid #1f6feb55; border-radius: 20px; padding: 4px 14px; margin: 4px; font-size: .85rem; }
+  main { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+  .card h2 { color: #58a6ff; margin-bottom: 10px; font-size: 1.3rem; }
+  .card ul { margin: 10px 0 10px 20px; color: #c9d1d9; }
+  .card .meta { color: #8b949e; font-size: .85rem; margin-top: 12px; }
+  .flow { background: #0d1117; border: 1px dashed #30363d; border-radius: 8px; padding: 12px 16px; font-family: monospace; color: #79c0ff; font-size: .9rem; margin-top: 10px; }
+  a.btn { display: inline-block; background: #238636; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 8px; margin-top: 12px; font-weight: 600; }
+  a.btn:hover { background: #2ea043; }
+  footer { text-align: center; color: #8b949e; padding: 30px; font-size: .85rem; }
+  code { background: #21262d; padding: 2px 6px; border-radius: 4px; color: #79c0ff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pixel — AI Engineer</h1>
+  <p>I connect AI agents to real infrastructure: send a message on Telegram and the agent writes code, runs commands and manages Docker — end to end.</p>
+  <div style="margin-top:16px">
+    <span class="tag">Telegram bots</span>
+    <span class="tag">AI Agents</span>
+    <span class="tag">Docker</span>
+    <span class="tag">Docker Compose</span>
+    <span class="tag">Python</span>
+    <span class="tag">Web apps & APIs</span>
+  </div>
+</header>
+<main>
+  <div class="card">
+    <h2>Hermes agent on Telegram + Docker</h2>
+    <p>Flagship demo: a Hermes AI agent connected to Telegram. You text it, it executes — creates files, runs code in the terminal, builds Docker projects and reports back in the chat.</p>
+    <div class="flow">Telegram message &rarr; Hermes agent &rarr; terminal / Docker &rarr; result back in Telegram</div>
+    <ul>
+      <li>Agent receives Telegram messages and executes real tasks (code, files, commands)</li>
+      <li>Produces Docker projects (Dockerfile, Compose, docs) from a chat request</li>
+      <li>Verified by real runs: API tested with curl, Redis answered <code>+PONG</code></li>
+    </ul>
+    <div class="meta">Stack: Telegram Bot API · Hermes agent · Docker · Python</div>
+  </div>
+
+  <div class="card">
+    <h2>hermes-docker-demo</h2>
+    <p>Containerized Python API + Redis orchestrated with Docker Compose: non-root user, healthcheck, one-command setup.</p>
+    <ul>
+      <li>One-command setup: <code>docker compose up --build</code></li>
+      <li>Endpoints: <code>GET /</code> and <code>GET /redis</code> (returns <code>+PONG</code>)</li>
+      <li>.dockerignore + README with all commands included</li>
+    </ul>
+    <div class="meta">Stack: Docker · Docker Compose · Python 3 · Redis</div>
+    <a class="btn" href="https://github.com/USERNAME/docker-hermes-demo" target="_blank">View code on GitHub</a>
+  </div>
+
+  <div class="card">
+    <h2>Web apps & APIs</h2>
+    <ul>
+      <li>REST APIs and web apps in Python (Flask/FastAPI) and JavaScript</li>
+      <li>Containerized deployments with Docker, ready for production</li>
+      <li>LLM / speech API integrations (audio, video, subtitles, dubbing pipelines)</li>
+      <li>Clear docs so your team runs everything without me</li>
+    </ul>
+  </div>
+</main>
+<footer>Available for freelance on Upwork — AI agents, Docker, backend and web apps.</footer>
+</body>
+</html>

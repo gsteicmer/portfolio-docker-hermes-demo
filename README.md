@@ -1,26 +1,39 @@
-[README (1).md](https://github.com/user-attachments/files/35121235/README.1.md)
-# Pixel — AI Agent + Docker + Telegram Portfolio
+[README (1).md](https://github.com/user-attachments/files/35124652/README.1.md)
+# hermes-docker-demo
 
-Personal portfolio site for freelance work (Upwork): AI agents connected to Telegram and Docker, plus web apps and APIs.
-
-## Live site
-This repo is published with GitHub Pages:
-**https://gsteicmer.github.io/portfolio**
-
-## What's inside
-- `index.html` — the portfolio page (single file, no build step)
-- `portfolio-print.png` — screenshot of the rendered page
-
-## Featured project
-**hermes-docker-demo** — Python API + Redis in Docker Compose, built by a Hermes AI agent from a Telegram message.
-Repo: https://github.com/gsteicmer/docker-hermes-demo
-
-Run it:
-```
-docker compose up --build
-curl http://localhost:8000/
-curl http://localhost:8000/redis
-```
+Containerized Python API + Redis, orchestrated with Docker Compose.
+Built end-to-end by an AI agent (Hermes) from a Telegram chat message.
 
 ## Stack
-Telegram Bot API · Hermes agent · Docker · Docker Compose · Python · REST APIs
+- Python 3 (stdlib HTTP server)
+- Redis 7
+- Docker + Docker Compose
+- Non-root container user, HEALTHCHECK, restart policy
+
+## Run it
+
+```
+docker compose up --build
+```
+
+## Test it
+
+```
+curl http://localhost:8000/        # app info (JSON)
+curl http://localhost:8000/redis   # redis check (returns +PONG)
+```
+
+## Useful commands
+
+```
+docker compose ps           # list running containers
+docker compose logs -f app  # follow app logs
+docker compose down         # stop everything
+docker images               # see image sizes
+```
+
+## Files
+- `app.py` — HTTP API with `/` and `/redis` endpoints
+- `Dockerfile` — python:3.12-slim, non-root, healthcheck
+- `docker-compose.yml` — app + redis services
+- `.dockerignore` — keeps the image clean
